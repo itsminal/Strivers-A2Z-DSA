@@ -2,15 +2,27 @@
 using namespace std;
 
 int f(int n){
+        int a,b,c,i,ans;
+        a=0;
+        b=1;
+        i=2;
+        ans=0;
         if(n==0){
                 return 0;
         }
-        else if(n==1 || n==2){
+        else if(n==1){
                 return 1;
         }
-        else{
-                return f(n-1)+f(n-2);
+        while(i<=n){
+                c=a+b;
+                
+                ans=c;
+                a=b;
+                b=c;
+                i++;
         }
+        return ans;
+        
 }
 
 int main()
